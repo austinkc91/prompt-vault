@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Prompt Engineering Playbook — 100+ Battle-Tested AI Prompts</title>
+<meta name="description" content="Stop getting mediocre AI responses. Get 100+ copy-paste prompts for business, sales, coding, marketing, and data analysis. The CRAFT framework that makes every prompt work.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a2e;
+  line-height: 1.6;
+  background: #fafafa;
+}
+.hero {
+  background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+.hero .subtitle {
+  font-size: 1.3em;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+.hero .price-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+.hero .price-tag .old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+  margin-right: 8px;
+}
+.cta-button {
+  display: inline-block;
+  background: #e94560;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(233,69,96,0.4);
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233,69,96,0.5);
+}
+.section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.problem h2, .solution h2, .features h2, .sample h2, .faq h2, .final h2 {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.problem {
+  background: white;
+}
+.pain-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.pain-point {
+  background: #fff5f5;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #e94560;
+}
+.pain-point .emoji { font-size: 1.5em; margin-bottom: 10px; }
+.pain-point h3 { font-size: 1.1em; margin-bottom: 8px; }
+.solution {
+  background: #fafafa;
+}
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.solution-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.solution-card .emoji { font-size: 1.5em; margin-bottom: 10px; }
+.solution-card h3 { color: #0f3460; margin-bottom: 8px; }
+.features {
+  background: white;
+}
+.feature-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.feature-item .check {
+  color: #0f3460;
+  font-size: 1.4em;
+  flex-shrink: 0;
+}
+.feature-item h3 { font-size: 1em; margin-bottom: 4px; }
+.feature-item p { font-size: 0.9em; color: #666; }
+.sample {
+  background: #f0f0f5;
+}
+.sample-prompt {
+  background: #1a1a2e;
+  color: #a0e0a0;
+  padding: 25px;
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 20px;
+  white-space: pre-wrap;
+}
+.sample-label {
+  text-align: center;
+  color: #666;
+  font-size: 0.85em;
+  margin-bottom: 30px;
+}
+.faq {
+  background: white;
+}
+.faq-item {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.faq-item h3 {
+  font-size: 1em;
+  margin-bottom: 8px;
+  color: #0f3460;
+}
+.faq-item p { color: #555; font-size: 0.95em; }
+.final {
+  background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
+  color: white;
+  text-align: center;
+}
+.final h2 { color: white; }
+.final p { opacity: 0.9; margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.final .cta-button { margin-bottom: 15px; }
+.guarantee {
+  font-size: 0.85em;
+  opacity: 0.7;
+  margin-top: 15px;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+  font-size: 0.85em;
+  background: #1a1a2e;
+}
+footer a { color: #aaa; }
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8em; }
+  .hero .subtitle { font-size: 1.1em; }
+  .section { padding: 40px 15px; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>The Prompt Engineering Playbook</h1>
+  <p class="subtitle">100+ copy-paste prompts that turn AI into your unfair advantage for business, code, and content.</p>
+  <div class="price-tag">
+    <span class="old-price">$29</span> $9 — Launch Price
+  </div>
+  <br><br>
+  <a href="#buy" class="cta-button">Get the Playbook</a>
+</div>
+
+<div class="problem section">
+  <h2>Sound familiar?</h2>
+  <div class="pain-points">
+    <div class="pain-point">
+      <div class="emoji">😤</div>
+      <h3>Generic AI outputs</h3>
+      <p>You ask ChatGPT for help and get bland, surface-level responses that need heavy editing.</p>
+    </div>
+    <div class="pain-point">
+      <div class="emoji">⏰</div>
+      <h3>Wasted time tweaking</h3>
+      <p>You spend 20 minutes rephrasing the same prompt trying to get a useful result.</p>
+    </div>
+    <div class="pain-point">
+      <div class="emoji">🤷</div>
+      <h3>No system</h3>
+      <p>Everyone says "just use AI" but nobody shows you exactly what to type for real work.</p>
+    </div>
+  </div>
+</div>
+
+<div class="solution section">
+  <h2>What's inside</h2>
+  <div class="solution-grid">
+    <div class="solution-card">
+      <div class="emoji">📋</div>
+      <h3>The CRAFT Framework</h3>
+      <p>A repeatable 5-step system for writing prompts that work the first time. Context, Role, Ask, Format, Tone.</p>
+    </div>
+    <div class="solution-card">
+      <div class="emoji">💼</div>
+      <h3>Business & Sales (8 prompts)</h3>
+      <p>Cold outreach, proposals, competitive analysis, objection handling, pricing strategy, revenue forecasting.</p>
+    </div>
+    <div class="solution-card">
+      <div class="emoji">📝</div>
+      <h3>Content & Marketing (6 prompts)</h3>
+      <p>Blog frameworks, social calendars, product descriptions, newsletters, SEO strategy, landing page copy.</p>
+    </div>
+    <div class="solution-card">
+      <div class="emoji">💻</div>
+      <h3>Coding & Technical (6 prompts)</h3>
+      <p>Code review, architecture design, debugging, test writing, API docs, query optimization.</p>
+    </div>
+    <div class="solution-card">
+      <div class="emoji">📊</div>
+      <h3>Data & Analysis (3 prompts)</h3>
+      <p>Dataset exploration, report generation, survey/feedback analysis with actionable insights.</p>
+    </div>
+    <div class="solution-card">
+      <div class="emoji">🧠</div>
+      <h3>Advanced Techniques</h3>
+      <p>Chain of thought, role stacking, output constraints, iterative refinement, persona testing.</p>
+    </div>
+  </div>
+</div>
+
+<div class="features section">
+  <h2>Why this works</h2>
+  <div class="feature-list">
+    <div class="feature-item">
+      <span class="check">&#10003;</span>
+      <div>
+        <h3>Copy-paste ready</h3>
+        <p>Every prompt has fill-in-the-blank placeholders. Just swap in your details and go.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <span class="check">&#10003;</span>
+      <div>
+        <h3>Works with any AI</h3>
+        <p>ChatGPT, Claude, Gemini, Copilot — these prompts work everywhere because they follow universal principles.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <span class="check">&#10003;</span>
+      <div>
+        <h3>Real-world tested</h3>
+        <p>Every prompt was used on actual business tasks before making it into the playbook. No filler.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <span class="check">&#10003;</span>
+      <div>
+        <h3>Quick reference cheat sheet</h3>
+        <p>One-page table of prompt starters and power modifiers. Print it. Pin it. Use it daily.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sample section">
+  <h2>Sample prompt</h2>
+  <div class="sample-prompt">You are an expert B2B sales copywriter.
+Write a cold email sequence (3 emails, 3-5 days apart)
+for [YOUR PRODUCT] targeting [ROLE] at [COMPANY TYPE].
+
+Requirements:
+- Email 1: Pattern interrupt + value prop (under 100 words)
+- Email 2: Social proof + specific result (under 80 words)
+- Email 3: Breakup email with soft CTA (under 60 words)
+- Subject lines: lowercase, conversational
+- One personalization placeholder per email [BRACKET]</div>
+  <p class="sample-label">This is 1 of 100+ prompts in the playbook. Each one is this specific.</p>
+</div>
+
+<div class="faq section">
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <h3>Will this work with ChatGPT free?</h3>
+    <p>Yes. These prompts work with any AI model — free or paid. Better models give better results, but the prompts improve output regardless.</p>
+  </div>
+  <div class="faq-item">
+    <h3>I already use AI daily. Is this still useful?</h3>
+    <p>If you sometimes get vague or off-target responses, yes. The CRAFT framework and structured prompts consistently produce better results than ad-hoc prompting.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What format is it in?</h3>
+    <p>PDF. Instant download after purchase. Easy to search, print, or reference on any device.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Do you offer refunds?</h3>
+    <p>If the playbook doesn't improve your AI outputs, email us and we'll refund you. No questions asked.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Will there be updates?</h3>
+    <p>Yes. As AI models evolve, we update the playbook. All updates are free for existing buyers.</p>
+  </div>
+</div>
+
+<div class="final section" id="buy">
+  <h2>Get the Playbook</h2>
+  <p>Stop wrestling with AI. Start getting results worth sharing.</p>
+  <div class="price-tag" style="margin-bottom: 25px;">
+    <span class="old-price">$29</span> $9 — Launch Price
+  </div>
+  <br>
+  <a href="#" class="cta-button" id="buy-button">Buy Now — $9</a>
+  <p class="guarantee">100% satisfaction guarantee. Instant PDF download.</p>
+</div>
+
+<footer>
+  &copy; 2026 PromptVault. All rights reserved.
+</footer>
+
+</body>
+</html>
